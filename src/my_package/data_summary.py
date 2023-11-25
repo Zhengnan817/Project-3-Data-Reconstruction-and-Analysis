@@ -16,3 +16,11 @@ class Data_process:
     def say(self):
         print("The file is", self.filepath)
         print(self.project.head(1))
+
+    def check_data(self):
+        # Use isna and sum function to see if there are any null values in the data set.
+        return self.df.isna().sum()
+
+    def remove_null(self):
+        return self.df.dropna()
+    def 
