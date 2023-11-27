@@ -1,3 +1,7 @@
+"""
+
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
@@ -17,8 +21,6 @@ class EDA:
         """
         Create a barplot for 'Type' and 'Vendor' in one picture using Seaborn.
 
-        Returns:
-        - None
         """
         # Create a barplot for 'Type' and 'Vendor' in one picture
         plt.figure(figsize=(12, 6))
@@ -38,7 +40,7 @@ class EDA:
         plt.title("Barplot of Type and Vendor")
 
         # Show the plot
-        return plt.show()
+        plt.show()
 
     def type_vendor_plt(self):
         """
@@ -63,7 +65,7 @@ class EDA:
         plt.title("Barplot of Type and Vendor")
 
         # Show the plot
-        return plt.show()
+        plt.show()
 
     def process_size_sns(self):
         """
@@ -76,7 +78,7 @@ class EDA:
         sns.boxplot(data=self.df["Process Size"], orient="h")
         plt.title("Boxplot of chip process size")
         plt.xlabel("Values")
-        return plt.show()
+        plt.show()
 
     def process_size_plt(self):
         """
@@ -89,7 +91,7 @@ class EDA:
         plt.boxplot(self.df["Process Size"], vert=False)
         plt.title("Boxplot of chip process size")
         plt.xlabel("Values")
-        return plt.show()
+        plt.show()
 
     def vendor_distribution_sns(self):
         """
@@ -99,11 +101,13 @@ class EDA:
         - None
         """
         plt.figure(figsize=(12, 6))
-        sns.countplot(x=self.df["Vendor"], palette="husl")
+        sns.countplot(
+            x="Vendor", data=self.df, palette="husl", hue="Vendor", legend=False
+        )
         plt.title("Distribution of Vendors")
         plt.xlabel("Vendor")
         plt.ylabel("Count")
-        return plt.show()
+        plt.show()
 
     def vendor_distribution_plt(self):
         """
@@ -125,7 +129,7 @@ class EDA:
         plt.xticks(
             rotation=45, ha="right"
         )  # Rotate x-axis labels for better readability
-        return plt.show()
+        plt.show()
 
     def TDP_distribution_sns(self):
         """
@@ -135,9 +139,16 @@ class EDA:
         - None
         """
         plt.figure(figsize=(12, 8))
-        sns.boxplot(x="Vendor", y="TDP", data=self.df, palette="Set3")
+        sns.boxplot(
+            x="Vendor",
+            y="TDP",
+            data=self.df,
+            palette="Set3",
+            hue="Vendor",
+            legend=False,
+        )
         plt.title("TDP distribute in different vendors")
-        return plt.show()
+        plt.show()
 
     def TDP_distribution_plt(self):
         """
@@ -162,4 +173,4 @@ class EDA:
         plt.xlabel("Vendor")
         plt.ylabel("TDP")
         plt.title("TDP distribution in different vendors")
-        return plt.show()
+        plt.show()
