@@ -1,8 +1,4 @@
-import matplotlib.pyplot as plt  # noqa: F401
-import numpy as np  # noqa: F401
 import pandas as pd
-import seaborn as sn  # noqa: F401
-from pandas import Series, DataFrame  # noqa: F401
 
 
 class Data_process:
@@ -10,17 +6,38 @@ class Data_process:
         self.filepath = filepath
         self.df = pd.read_csv(filepath)
 
-    def view_data(self):
-        return self.df.head()
+    def load_data(self):
+        try:
+            # Load data into a DataFrame
+            data = pd.read_csv(self.file_path)
+            return data
+        except FileNotFoundError:
+            print(f"File not found at path: {self.file_path}")
+            return None
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            return None
 
-    def say(self):
-        print("The file is", self.filepath)
-        print(self.project.head(1))
+    def view_data(self):
+        """
+        Display the first few rows of the dataframe.
+
+        Returns:
+        pandas.DataFrame: The first few rows of the dataframe.
+        """
+        return self.df
 
     def check_data(self):
-        # Use isna and sum function to see if there are any null values in the data set.
+        """
+        Print information about the file and display the first row of the dataframe.
+        """
         return self.df.isna().sum()
 
     def remove_null(self):
+        """
+        Remove rows with null values from the dataframe.
+
+        Returns:
+        pandas.DataFrame: The dataframe with null values removed.
+        """
         return self.df.dropna()
-    def 
