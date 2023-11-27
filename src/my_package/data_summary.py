@@ -6,18 +6,6 @@ class Data_process:
         self.filepath = filepath
         self.df = pd.read_csv(filepath)
 
-    def load_data(self):
-        try:
-            # Load data into a DataFrame
-            data = pd.read_csv(self.file_path)
-            return data
-        except FileNotFoundError:
-            print(f"File not found at path: {self.file_path}")
-            return None
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            return None
-
     def view_data(self):
         """
         Display the first few rows of the dataframe.
