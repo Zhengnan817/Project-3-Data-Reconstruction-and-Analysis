@@ -28,7 +28,7 @@ def main():
 
 
 def data_summary():
-    my_file_path = "./data/chip_dataset.csv"
+    my_file_path = "chip_analysis_data/data/chip_dataset.csv"
     cpu_table = Data_process(my_file_path)
     df = cpu_table.view_data()
     print(df.head())
