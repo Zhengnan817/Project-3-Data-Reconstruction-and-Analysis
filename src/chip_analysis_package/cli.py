@@ -45,25 +45,25 @@ def exploratory_data_analysis():
     from src.chip_analysis_package.exploratory_data_analysis import EDA
 
     EDA_part = EDA(df)
-    type_distribution_sns = EDA_part.vendor_distribution_sns()
+    print(type_distribution_sns=EDA_part.vendor_distribution_sns())
 
-    type_distribution_plt = EDA_part.vendor_distribution_plt()
+    print(type_distribution_plt=EDA_part.vendor_distribution_plt())
 
-    product_vendor_sns = EDA_part.type_vendor_sns()
+    print(product_vendor_sns=EDA_part.type_vendor_sns())
 
-    product_vendor_plt = EDA_part.type_vendor_plt()
+    print(product_vendor_plt=EDA_part.type_vendor_plt())
 
-    process_size_sns = EDA_part.process_size_sns()
+    print(process_size_sns=EDA_part.process_size_sns())
 
-    process_size_plt = EDA_part.process_size_plt()
+    print(process_size_plt=EDA_part.process_size_plt())
 
-    process_size_vendor = EDA_part.process_size_vendor_sns()
+    print(process_size_vendor=EDA_part.process_size_vendor_sns())
 
-    process_size_vendor = EDA_part.process_size_vendor_plt()
+    print(process_size_vendor=EDA_part.process_size_vendor_plt())
 
-    release_date_sns = EDA_part.TDP_distribution_sns()
+    print(release_date_sns=EDA_part.TDP_distribution_sns())
 
-    release_date_plt = EDA_part.TDP_distribution_plt()
+    print(release_date_plt=EDA_part.TDP_distribution_plt())
 
 
 def inferences():
@@ -72,8 +72,8 @@ def inferences():
     from src.chip_analysis_package.inferences import Inferences  # noqa: E402
 
     inferences_analysis = Inferences(df)
-    inferences_analysis.vendor_type_plt()
-    inferences_analysis.vendor_type_sns()
-    inferences_analysis.chip_attribute()
-    inferences_analysis.ave_freq_type_ven()
-    inferences_analysis.freq_and_TDP()
+    print(inferences_analysis.vendor_type_plt())
+    print(inferences_analysis.vendor_type_sns())
+    print(inferences_analysis.chip_attribute())
+    print(inferences_analysis.ave_freq_type_ven())
+    print(inferences_analysis.freq_and_TDP())
