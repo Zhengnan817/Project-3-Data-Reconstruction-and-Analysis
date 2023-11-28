@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Project_3_Data_Reconstruction_and_Analysis"
+authors = [
+    {name = "Zhengnan Li", email = "zli6@mail.yu.edu"}
+]
+maintainers = [
+    {name = "Zhengnan Li", email = "zli6@mail.yu.edu"},
+]
+description = "Project 3 is a assignment to aggregate, group, and reshape data. And present a visualization result by EDA."
+readme = "README.md"
+keywords = ["data visualization", "Chips of CPU and GPU", "Analytics Programming"]
+license = {text = "MIT License"}
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.3",
+    "numpy>=1.20",
+    "pandas>=1.4",
+    "beautifulsoup4>=4.10.0",
+    "requests>=2.27.1"
+    "seaborn>=0.13.0"
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis"
+
+[project.scripts]
+Project_3_Data_Reconstruction_and_Analysis = "chip_analysis_package.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
