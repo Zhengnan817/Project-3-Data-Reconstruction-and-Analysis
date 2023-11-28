@@ -20,8 +20,8 @@ dependencies = [
     "numpy>=1.20",
     "pandas>=1.4",
     "beautifulsoup4>=4.10.0",
-    "requests>=2.27.1"
-    "seaborn>=0.13.0"
+    "requests>=2.27.1",
+    "seaborn>=0.13.0",
 ]
 dynamic = ["version"]
 
