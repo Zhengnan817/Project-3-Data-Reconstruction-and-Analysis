@@ -1,4 +1,8 @@
-"""
+import pandas as pd
+
+
+class DataProcess:
+    """
     A class for handling and processing data from a CSV file using Pandas.
 
     This class provides methods to initialize the class with a CSV file, view the data,
@@ -13,11 +17,8 @@
     - view_data(self): Display the first few rows of the dataframe.
     - check_data(self): Print information about the file and display the first row of the dataframe.
     - remove_null(self): Remove rows with null values from the dataframe.
-"""
-import pandas as pd
+    """
 
-
-class Data_process:
     def __init__(self, filepath):
         """
         Initialize the Solution class with a filepath and read the CSV file into a Pandas DataFrame.

@@ -23,13 +23,11 @@ dependencies = [
     "requests>=2.27.1",
     "seaborn>=0.13.0",
 ]
-dynamic = ["version"]
+version = "2.0"
 
 [project.urls]
 Repository = "https://github.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis"
 
-[project.scripts]
-Project_3_Data_Reconstruction_and_Analysis = "chip_analysis_package.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

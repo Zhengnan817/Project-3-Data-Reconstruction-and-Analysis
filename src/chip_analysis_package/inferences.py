@@ -1,4 +1,10 @@
-"""
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+
+class Inferences:
+    """
     A class for generating various visualizations and inferences from Chips of GPU and CPU.
 
     This class provides methods to visualize and analyze data, specifically tailored for a DataFrame
@@ -16,13 +22,6 @@
     - freq_and_TDP(self): Generate a Matplotlib bar plot to visualize the average TDP by vendor.
     """
 
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
-
-
-class Inferences:
     def __init__(self, df):
         """
         Initialize the Inferences class with a DataFrame.

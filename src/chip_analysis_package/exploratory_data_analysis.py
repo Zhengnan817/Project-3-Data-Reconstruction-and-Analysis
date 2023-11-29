@@ -1,4 +1,10 @@
-"""
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+
+class EDA:
+    """
     A class for performing Exploratory Data Analysis (EDA) on Chips of CPU and GPU.
 
     This class provides methods to generate various visualizations for analyzing the distribution
@@ -17,14 +23,8 @@
     - vendor_distribution_plt(self): Create a Matplotlib barplot for the distribution of vendors.
     - TDP_distribution_sns(self): Create a Seaborn boxplot for the distribution of TDP in different vendors.
     - TDP_distribution_plt(self): Create a Matplotlib boxplot for the distribution of TDP in different vendors.
-"""
+    """
 
-import matplotlib.pyplot as plt
-import numpy as np
-import seaborn as sns
-
-
-class EDA:
     def __init__(self, df):
         """
         Initialize the EDA (Exploratory Data Analysis) class with a DataFrame.
