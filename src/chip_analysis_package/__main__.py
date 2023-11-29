@@ -11,6 +11,10 @@ def main():
     """
     print("Project_3_Data_Reconstruction_and_Analysis")
 
+    data_summary()
+    exploratory_data_analysis()
+    inferences()
+
 
 def data_summary():
     my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis_package/data/chip_dataset.csv"
@@ -60,6 +64,3 @@ def inferences():
     print(inferences_analysis.chip_attribute())
     print(inferences_analysis.ave_freq_type_ven())
     print(inferences_analysis.freq_and_TDP())
-
-
-main()
