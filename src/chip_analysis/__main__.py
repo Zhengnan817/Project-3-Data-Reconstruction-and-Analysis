@@ -36,7 +36,7 @@ def data_summary():
 def exploratory_data_analysis():
     my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
     cpu_table = DataProcess(my_file_path)
-    df = cpu_table.view_data
+    df = cpu_table.view_data()
     EDA_part = EDA(df)
     while True:
         EDA_part.vendor_distribution_sns()
@@ -63,7 +63,7 @@ def exploratory_data_analysis():
 def inferences():
     my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
     cpu_table = DataProcess(my_file_path)
-    df = cpu_table.view_data
+    df = cpu_table.view_data()
     inferences_analysis = Inferences(df)
     while True:
         inferences_analysis.vendor_type_plt()
