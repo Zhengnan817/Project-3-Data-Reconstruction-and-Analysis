@@ -30,6 +30,8 @@ def data_summary():
     column_types = df.dtypes
     print(column_types)
 
+    return cpu_table
+
 
 def exploratory_data_analysis():
     cpu_table = data_summary()
