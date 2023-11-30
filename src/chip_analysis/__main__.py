@@ -75,3 +75,6 @@ def inferences():
         inferences_analysis.ave_freq_type_ven()
 
         inferences_analysis.freq_and_TDP()
+
+
+main()
