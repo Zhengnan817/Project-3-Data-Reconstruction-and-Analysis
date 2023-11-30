@@ -1,8 +1,8 @@
-"""Enable running `python -m chip_analysis_package`."""
+"""Enable running `python -m chip_analysis`."""
 
-from src.chip_analysis_package.data_summary import DataProcess
-from src.chip_analysis_package.exploratory_data_analysis import EDA
-from src.chip_analysis_package.inferences import Inferences
+from src.chip_analysis.data_summary import DataProcess
+from src.chip_analysis.exploratory_data_analysis import EDA
+from src.chip_analysis.inferences import Inferences
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
 
 
 def data_summary():
-    my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis_package/data/chip_dataset.csv"
+    my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
     cpu_table = DataProcess(my_file_path)
     df = cpu_table.view_data()
     print(df.head())
