@@ -9,11 +9,16 @@ def main():
     """
     Run Chip analysis as a script.
     """
+    print("------------------------------------------------")
     print("Project_3_Data_Reconstruction_and_Analysis")
+    print("------------------------------------------------")
 
     data_summary()
+    print("------------------------------------------------")
     exploratory_data_analysis()
+    print("------------------------------------------------")
     inferences()
+    print("------------------------------------------------")
 
 
 def data_summary():
@@ -24,7 +29,6 @@ def data_summary():
 
     column_types = df.dtypes
     print(column_types)
-    return cpu_table
 
 
 def exploratory_data_analysis():
