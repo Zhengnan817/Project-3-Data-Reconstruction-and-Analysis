@@ -9,20 +9,20 @@ def main():
     """
     Run Chip analysis as a script.
     """
-    print("------------------------------------------------")
-    print("Project_3_Data_Reconstruction_and_Analysis")
-    print("------------------------------------------------")
+    print('------------------------------------------------')
+    print('Project_3_Data_Reconstruction_and_Analysis')
+    print('------------------------------------------------')
 
     data_summary()
-    print("------------------------------------------------")
+    print('------------------------------------------------')
     exploratory_data_analysis()
-    print("------------------------------------------------")
+    print('------------------------------------------------')
     inferences()
-    print("------------------------------------------------")
+    print('------------------------------------------------')
 
 
 def data_summary():
-    my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
+    my_file_path = 'https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv'
     cpu_table = DataProcess(my_file_path)
     df = cpu_table.view_data()
     print(df.head())
@@ -34,7 +34,7 @@ def data_summary():
 
 
 def exploratory_data_analysis():
-    my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
+    my_file_path = 'https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv'
     cpu_table = DataProcess(my_file_path)
     df = cpu_table.view_data()
     EDA_part = EDA(df)
@@ -61,7 +61,7 @@ def exploratory_data_analysis():
 
 
 def inferences():
-    my_file_path = "https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv"
+    my_file_path = 'https://raw.githubusercontent.com/Zhengnan817/Project-3-Data-Reconstruction-and-Analysis/main/src/chip_analysis/data/chip_dataset.csv'
     cpu_table = DataProcess(my_file_path)
     df = cpu_table.view_data()
     inferences_analysis = Inferences(df)
