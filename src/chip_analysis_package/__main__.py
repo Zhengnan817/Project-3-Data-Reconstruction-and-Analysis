@@ -64,3 +64,6 @@ def inferences():
     print(inferences_analysis.chip_attribute())
     print(inferences_analysis.ave_freq_type_ven())
     print(inferences_analysis.freq_and_TDP())
+
+
+main()
