@@ -33,25 +33,35 @@ def exploratory_data_analysis():
     df = cpu_table.view_data
 
     EDA_part = EDA(df)
-    print(type_distribution_sns=EDA_part.vendor_distribution_sns())
+    type_distribution_sns = EDA_part.vendor_distribution_sns()
+    print(type_distribution_sns)
 
-    print(type_distribution_plt=EDA_part.vendor_distribution_plt())
+    type_distribution_plt = EDA_part.vendor_distribution_plt()
+    print(type_distribution_plt)
 
-    print(product_vendor_sns=EDA_part.type_vendor_sns())
+    product_vendor_sns = EDA_part.type_vendor_sns()
+    print(product_vendor_sns)
 
-    print(product_vendor_plt=EDA_part.type_vendor_plt())
+    product_vendor_plt = EDA_part.type_vendor_plt()
+    print(product_vendor_plt)
 
-    print(process_size_sns=EDA_part.process_size_sns())
+    process_size_sns = EDA_part.process_size_sns()
+    print(process_size_sns)
 
-    print(process_size_plt=EDA_part.process_size_plt())
+    process_size_plt = EDA_part.process_size_plt()
+    print(process_size_plt)
 
-    print(process_size_vendor=EDA_part.process_size_vendor_sns())
+    process_size_vendor = EDA_part.process_size_vendor_sns()
+    print(process_size_vendor)
 
-    print(process_size_vendor=EDA_part.process_size_vendor_plt())
+    process_size_vendor = EDA_part.process_size_vendor_plt()
+    print(process_size_vendor)
 
-    print(release_date_sns=EDA_part.TDP_distribution_sns())
+    release_date_sns = EDA_part.TDP_distribution_sns()
+    print(release_date_sns)
 
-    print(release_date_plt=EDA_part.TDP_distribution_plt())
+    release_date_plt = EDA_part.TDP_distribution_plt()
+    print(release_date_plt)
 
 
 def inferences():
@@ -59,11 +69,21 @@ def inferences():
     df = cpu_table.view_data
 
     inferences_analysis = Inferences(df)
-    print(inferences_analysis.vendor_type_plt())
-    print(inferences_analysis.vendor_type_sns())
-    print(inferences_analysis.chip_attribute())
-    print(inferences_analysis.ave_freq_type_ven())
-    print(inferences_analysis.freq_and_TDP())
+
+    vendor_and_type = inferences_analysis.vendor_type_plt()
+    print(vendor_and_type)
+
+    vendor_and_type_sns = inferences_analysis.vendor_type_sns()
+    print(vendor_and_type_sns)
+
+    chip_attri = inferences_analysis.chip_attribute()
+    print(chip_attri)
+
+    average_freq = inferences_analysis.ave_freq_type_ven()
+    print(average_freq)
+
+    freq_TDP = inferences_analysis.freq_and_TDP()
+    print(freq_TDP)
 
 
 main()
