@@ -1,8 +1,8 @@
 """Enable running `python -m chip_analysis_package`."""
 
-from .data_summary import DataProcess
-from .exploratory_data_analysis import EDA
-from .inferences import Inferences
+from src.chip_analysis_package.data_summary import DataProcess
+from src.chip_analysis_package.exploratory_data_analysis import EDA
+from src.chip_analysis_package.inferences import Inferences
 
 
 def main():
