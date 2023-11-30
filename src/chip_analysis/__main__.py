@@ -33,7 +33,6 @@ def data_summary():
 
 def exploratory_data_analysis():
     cpu_table = data_summary()
-    cpu_table.check_data()
     df = cpu_table.view_data
 
     EDA_part = EDA(df)
